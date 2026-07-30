@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "randline-cli"
+version = "1.0.0"
+description = "Pick N random lines from a file or stdin via single-pass reservoir sampling, with no dependencies."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "All Rights Reserved" }
+authors = [{ name = "sidcore-dev" }]
+keywords = ["random", "sampling", "cli", "devtools", "reservoir-sampling"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: Other/Proprietary License",
+    "Environment :: Console",
+    "Topic :: Utilities",
+]
+
+[project.scripts]
+randline-cli = "randline_cli.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
